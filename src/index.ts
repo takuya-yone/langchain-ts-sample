@@ -1,25 +1,18 @@
-import { ChatOpenAI } from "@langchain/openai";
-import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { StringOutputParser } from "@langchain/core/output_parsers";
 
-export const main = async () => {
-  const prompt = ChatPromptTemplate.fromMessages([
-    ["human", "Tell me a short joke about {topic}"],
-  ]);
-  const model = new ChatOpenAI({});
-  const outputParser = new StringOutputParser();
-  
-  const chain = prompt.pipe(model).pipe(outputParser);
-  
-  const response = await chain.invoke({
-    topic: "ice cream",
+import { BedrockChat } from "@langchain/community/chat_models/bedrock";
+
+export const main = async (): Promise<void> => {
+  const model = new BedrockChat({
+    region: 'us-east-1',
+    model: 'anthropic.claude-v2:1',
+    maxTokens: 2048,
+    temperature: 0,
+    cache: false,
+    verbose: true,
   });
-  console.log(response);
-}
 
-/**
-Why did the ice cream go to the gym?
-Because it wanted to get a little "cone"ditioning!
- */
+  const res = await model.invoke([['human', 'LangChainとは何ですか？']]);
+  console.log(JSON.stringify(res, null, 2));
+};
 
 main()
