@@ -671,9 +671,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@langchain/community@npm:^0.2.24":
-  version: 0.2.24
-  resolution: "@langchain/community@npm:0.2.24"
+"@langchain/community@npm:^0.2.25":
+  version: 0.2.25
+  resolution: "@langchain/community@npm:0.2.25"
   dependencies:
     "@langchain/core": "npm:>=0.2.21 <0.3.0"
     "@langchain/openai": "npm:>=0.1.0 <0.3.0"
@@ -1048,7 +1048,7 @@ __metadata:
       optional: true
     youtubei.js:
       optional: true
-  checksum: 10c0/12a1a7105766ce6264cf3a74a9d139b08e4487230df1b96fba487004c6a03818b44805ae38f2ad40de42851780dd4f29e7dc801cbaaa2cfdd424b1a390bf5de9
+  checksum: 10c0/d44797284821aff7e9d4fb55b978e56777561953dafd732d8c462a438cdd821e708000a769bd383d6daf1b533436dfa5c5101927aba6e735c2e152383921bce9
   languageName: node
   linkType: hard
 
@@ -1630,7 +1630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.1.0":
+"@types/node@npm:*":
   version: 22.1.0
   resolution: "@types/node@npm:22.1.0"
   dependencies:
@@ -1645,6 +1645,15 @@ __metadata:
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c0/8be49897596d7641941d21d943b10a7b907af714617f9e3d1c69d735850de0c0a8d04f1428277c2b2451b4eda6ab1a3c05bfadfe66b4a30cd9ca51200814c647
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.2.0":
+  version: 22.2.0
+  resolution: "@types/node@npm:22.2.0"
+  dependencies:
+    undici-types: "npm:~6.13.0"
+  checksum: 10c0/c17900b34faecfec204f72970bd658d0c217aaf739c1bf7690c969465b6b26b77a8be1cd9ba735aadbd1dd20b5c3e4f406ec33528bf7c6eec90744886c5d5608
   languageName: node
   linkType: hard
 
@@ -1920,13 +1929,13 @@ __metadata:
     "@aws-sdk/credential-provider-node": "npm:^3.624.0"
     "@aws-sdk/types": "npm:^3.609.0"
     "@biomejs/biome": "npm:^1.8.3"
-    "@langchain/community": "npm:^0.2.24"
+    "@langchain/community": "npm:^0.2.25"
     "@langchain/openai": "npm:^0.2.6"
     "@smithy/eventstream-codec": "npm:^3.1.2"
     "@smithy/protocol-http": "npm:^4.1.0"
     "@smithy/signature-v4": "npm:^4.1.0"
     "@smithy/util-utf8": "npm:^3.0.0"
-    "@types/node": "npm:^22.1.0"
+    "@types/node": "npm:^22.2.0"
     dotenv: "npm:^16.4.5"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.5.4"
