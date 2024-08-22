@@ -30,6 +30,15 @@ const memory = new BufferMemory({
 	}),
 });
 
+const systemTemplate =
+	"この会話以降下記のルールに従ってください。語尾に「だっちゃ」と付けてください。私のことは「ダーリン」と読んでください。日本語で該当してください。";
+const humanTemplate = "{text}";
+
+const chatPrompt = ChatPromptTemplate.fromMessages([
+	["system", systemTemplate],
+	["human", humanTemplate],
+]);
+
 export const main = async (): Promise<void> => {
 	const model = new BedrockChat({
 		region: "us-east-1",
@@ -39,11 +48,18 @@ export const main = async (): Promise<void> => {
 		// cache: false,
 		// verbose: false,
 	});
-	const system = "あなたは入力された文章を英語に変換するアシスタントです";
+	// const system = "あなたは入力された文章を英語に変換するアシスタントです";
 
 	const messages = [
-		// new SystemMessage(system),
-		new HumanMessage("LangChainとは何ですか？"),
+		[
+			new SystemMessage(systemTemplate),
+			new HumanMessage("LangChainとは何ですか？"),
+		],
+	];
+
+	const messages2 = [
+		["system", systemTemplate],
+		// ["human", "LangChainとは何ですか？"],
 	];
 
 	const chain = new ConversationChain({
@@ -62,16 +78,15 @@ export const main = async (): Promise<void> => {
 	// 	input: "LangChainとは何ですか？",
 	// });
 	const inputTexts = [
-		"この会話以降、語尾に「だっちゃ」と付けてください。",
-		// "ラムちゃんの口調を真似して回答してください",
 		"LangChainとは何ですか？",
 		"1行でまとめてください",
+		"私の名前は？",
 	];
 
+	const res = await chain.predict({ input: systemTemplate });
+	// console.log(res);
 	for (const text of inputTexts) {
-		const res = await chain.predict({
-			input: text,
-		});
+		const res = await chain.predict({ input: text });
 		console.log(`>>> ${text}`);
 		console.log("");
 		console.log(res);
