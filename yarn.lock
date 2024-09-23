@@ -62,9 +62,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-dynamodb@npm:^3.654.0":
-  version: 3.654.0
-  resolution: "@aws-sdk/client-dynamodb@npm:3.654.0"
+"@aws-sdk/client-dynamodb@npm:^3.656.0":
+  version: 3.656.0
+  resolution: "@aws-sdk/client-dynamodb@npm:3.656.0"
   dependencies:
     "@aws-crypto/sha256-browser": "npm:5.2.0"
     "@aws-crypto/sha256-js": "npm:5.2.0"
@@ -110,7 +110,7 @@ __metadata:
     "@smithy/util-waiter": "npm:^3.1.5"
     tslib: "npm:^2.6.2"
     uuid: "npm:^9.0.1"
-  checksum: 10c0/1fd0ec1dbb6a2a1d63d7480d7af22153e331a8156093415e6d3168d169d81cc18f7e26b11997c1f5b39f18c5186fbc938ae6d53e417989e5c9da0736a0103d4d
+  checksum: 10c0/7ad655fd6302ca5d69702aa88372c51750459d6bb0e373455ed439fe5115bc702caa8c9b2d6e53cebd5afca731018c281d0dc06ff2799588044223cdea27a7da
   languageName: node
   linkType: hard
 
@@ -1364,6 +1364,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@smithy/signature-v4@npm:^4.1.4":
+  version: 4.1.4
+  resolution: "@smithy/signature-v4@npm:4.1.4"
+  dependencies:
+    "@smithy/is-array-buffer": "npm:^3.0.0"
+    "@smithy/protocol-http": "npm:^4.1.3"
+    "@smithy/types": "npm:^3.4.2"
+    "@smithy/util-hex-encoding": "npm:^3.0.0"
+    "@smithy/util-middleware": "npm:^3.0.6"
+    "@smithy/util-uri-escape": "npm:^3.0.0"
+    "@smithy/util-utf8": "npm:^3.0.0"
+    tslib: "npm:^2.6.2"
+  checksum: 10c0/b3fcd15d6d0703d8b88a5b248d4c8a71406994f03ca3baabbb45060e53763331883a390ae65e5b0fae3c79858c5e833daf51209f5acdde2c254d5e67e1a8235c
+  languageName: node
+  linkType: hard
+
 "@smithy/smithy-client@npm:^3.3.2":
   version: 3.3.2
   resolution: "@smithy/smithy-client@npm:3.3.2"
@@ -1883,7 +1899,7 @@ __metadata:
   resolution: "langchain-ts-sample@workspace:."
   dependencies:
     "@aws-crypto/sha256-js": "npm:^5.2.0"
-    "@aws-sdk/client-dynamodb": "npm:^3.654.0"
+    "@aws-sdk/client-dynamodb": "npm:^3.656.0"
     "@aws-sdk/client-sts": "npm:^3.654.0"
     "@aws-sdk/credential-provider-node": "npm:^3.654.0"
     "@aws-sdk/types": "npm:^3.654.0"
@@ -1892,7 +1908,7 @@ __metadata:
     "@langchain/openai": "npm:^0.3.0"
     "@smithy/eventstream-codec": "npm:^3.1.5"
     "@smithy/protocol-http": "npm:^4.1.3"
-    "@smithy/signature-v4": "npm:^4.1.3"
+    "@smithy/signature-v4": "npm:^4.1.4"
     "@smithy/util-utf8": "npm:^3.0.0"
     "@types/node": "npm:^22.5.5"
     dotenv: "npm:^16.4.5"
